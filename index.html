@@ -20,13 +20,14 @@
                 snap="offset: 0.25 0.25 0.25; snap: 0.5 0.5 0.5"></a-mixin>
 
        <a-asset-item id="fuente" src="fuente.glb"></a-asset-item>         
+       <audio id="agua" src="agua.mp3" preload="auto"></audio>
       </a-assets>
 
       <a-cylinder id="ground" src="#groundTexture" radius="32" height="0.1"></a-cylinder>
 
       <a-entity light="type: ambient"></a-entity>
       <a-entity light="type: directional"></a-entity>
-      <a-entity gltf-model="#fuente" position="0 0 -3"></a-entity>
+      <a-entity gltf-model="#fuente" position="0 0 -3" sound="src: #agua; on: click; volume: 2"></a-entity>
 
       <a-sky id="background" src="#skyTexture" theta-length="90" radius="30"></a-sky>
 
@@ -39,6 +40,7 @@
                     laser-controls  
                     raycaster = "near: 0.5"  
                     intersection-spawn = "event: clic; mixin: voxel" > </ a-entity >
+
          <a-camera></a-camera>
       </a-entity>
 
