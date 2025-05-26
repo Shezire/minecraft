@@ -21,6 +21,7 @@
 
        <a-asset-item id="fuente" src="fuente.glb"></a-asset-item>
        <a-asset-item id="arbol" src="arbol_descarga.glb"></a-asset-item>         
+       <a-asset-item id="taxi" src="taxi.glb"></a-asset-item>   
       </a-assets>
 
       <a-cylinder id="ground" src="#groundTexture" radius="32" height="0.1"></a-cylinder>
@@ -28,6 +29,11 @@
       <a-entity light="type: ambient"></a-entity>
       <a-entity light="type: directional"></a-entity>
       <a-entity gltf-model="#fuente" position="0 0 -3" sound="src: #agua; on: click; volume: 2"></a-entity>
+         <a-entity gltf-model="#taxi" position="0 0 5" rotation="0 360 0"
+                   animation="property: rotation; to: 0 360 0; dur: 2000;
+                              easing: linear; loop: true; dir: normal"></a-entity>
+                
+
       <a-entity gltf-model="#arbol" position="0 0 3"></a-entity>
 
       <a-box position="0 1 0.5" color="#4CC3D9" depth="0.01" height="1" width="1"></a-box>
